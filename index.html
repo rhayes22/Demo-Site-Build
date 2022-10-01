@@ -7,12 +7,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-    </head>
+        <script src="https://kit.fontawesome.com/3eb8184c0a.js" crossorigin="anonymous"></script> 
     <body>
         <section class="header">
             <nav>
                 <a href="index.html"><img src="images/logo.png"></a>
-                <div class="nav-links">
+                <div class="nav-links" id="navLinks">
+                    <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
                     <ul>
                         <li><a href="">HOME</a></li>
                         <li><a href="">ABOUT</a></li>
@@ -21,13 +22,24 @@
                         <li><a href="">CONTACT</a></li>
                     </ul>
                 </div>
+                <i class="fa-solid fa-bars" onclick="showMenu()"></i>
             </nav>
             <div class="text-box">
                 <h1>World's Biggest University</h1>
                 <p>Making a website is now very easy to do.</p>
-                <a href="">Visit us to Learn More!</a>
+                <a href="" class="hero-btn">Visit us to Learn More!</a>
             </div>
         </section>
 
+        <!---JavaScript for toggle menu-->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
     </body>
 </html>
